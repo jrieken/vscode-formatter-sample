@@ -17,7 +17,7 @@
         "color": "#1e1e1e",
         "theme": "dark"
     },
-    "icon": "https://github.com/alexbabichev/vscode-pug-formatter/raw/master/assets/pug-logo.png",
+    "icon": "https://github.com/alexbabichev/vscode-pug-formatter/raw/master/assets/pug-logo_128x128.png",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/alexbabichev/vscode-pug-formatter.git"
