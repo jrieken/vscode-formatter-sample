@@ -299,6 +299,9 @@
 						},
 						{
 							"include": "#interpolated_error"
+						},
+						{
+							"include": "#vue-interpolations"
 						}
 					]
 				},
@@ -340,6 +343,9 @@
 						},
 						{
 							"include": "#interpolated_error"
+						},
+						{
+							"include": "#vue-interpolations"
 						}
 					]
 				},
@@ -721,6 +727,9 @@
 				},
 				{
 					"include": "#interpolated_error"
+				},
+				{
+					"include": "#vue-interpolations"
 				}
 			]
 		},
@@ -748,6 +757,9 @@
 				},
 				{
 					"include": "#interpolated_error"
+				},
+				{
+					"include": "#vue-interpolations"
 				}
 			]
 		},
@@ -870,6 +882,9 @@
 				},
 				{
 					"include": "#interpolated_error"
+				},
+				{
+					"include": "#vue-interpolations"
 				}
 			]
 		},
@@ -885,6 +900,9 @@
 				},
 				{
 					"include": "#interpolated_error"
+				},
+				{
+					"include": "#vue-interpolations"
 				}
 			]
 		},
