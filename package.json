@@ -1,6 +1,6 @@
 {
-    "name": "formatter-sample",
-    "displayName": "formatter-sample",
+    "name": "formatter-pug",
+    "displayName": "formatter-pug",
     "description": "",
     "version": "0.0.1",
     "publisher": "jrieken",
@@ -11,30 +11,69 @@
         "Other"
     ],
     "activationEvents": [
-        "onLanguage:foo-lang"
+        "onLanguage:pug",
+        "onCommand:extension.format-pug"
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "languages": [
-            {
-                "id": "foo-lang",
-                "aliases": [
-                    "Foo"
-                ],
-                "extensions": [
-                    "foo"
-                ]
+        "languages": [{
+            "id": "pug",
+            "aliases": [
+                "Pug"
+            ],
+            "extensions": [
+                ".pug"
+            ],
+            "configuration": "./languages/lang.json"
+        }],
+        "commands": [{
+            "command": "extension.format-pug",
+            "title": "Format Pug Files"
+        }],
+        "grammars": [{
+            "language": "pug",
+            "path": "./syntaxes/pug.tmLanguage.json",
+            "scopeName": "text.pug",
+            "embeddedLanguages": {
+                "text.html.basic": "html",
+                "source.js": "javascript",
+                "source.ts": "typescript"
             }
-        ],
-        "commands": [
-            {
-                "command": "extension.format-foo",
-                "title": "(Bad) Format Foo Files"
+        }],
+        "configuration": {
+            "type": "object",
+            "title": "Pug",
+            "properties": {
+                "pug.format.enable": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Complete functions with their parameter signature."
+                },
+                "formatter-pug.fillTab": {
+                    "type": ["boolean", "null"],
+                    "default": null,
+                    "description": "Indent with Tabs, if false, with spaces."
+                },
+                "formatter-pug.omitDiv": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Omit div tag when it has id or class."
+                },
+                "formatter-pug.tabSize": {
+                    "type": ["number", "null"],
+                    "default": 2,
+                    "description": "When `fillTab` is false, fill `tabSize` spaces."
+                }
             }
-        ]
+        }
     },
     "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install && tsc"
+    },
+    "dependencies": {
+        "pug-beautify": "0.1.1"
     },
     "devDependencies": {
         "@types/node": "*",
