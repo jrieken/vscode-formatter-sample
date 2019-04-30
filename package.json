@@ -1,15 +1,30 @@
 {
     "name": "formatter-pug",
     "displayName": "formatter-pug",
-    "description": "",
+    "description": "Syntax highlighting for Pug templates ",
     "version": "0.0.1",
     "publisher": "alexbabichev",
+    "author": "Alex Babichev",
+    "homepage": "https://github.com/alexbabichev/vscode-pug-formatter#readme",
+    "license": "MIT",
     "engines": {
         "vscode": "^1.6.0"
     },
     "categories": [
         "Other"
     ],
+    "galleryBanner": {
+        "color": "#1e1e1e",
+        "theme": "dark"
+    },
+    "icon": "https://github.com/alexbabichev/vscode-pug-formatter/raw/master/assets/pug-logo.png",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alexbabichev/vscode-pug-formatter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/alexbabichev/vscode-pug-formatter/issues"
+    },
     "activationEvents": [
         "onLanguage:pug",
         "onCommand:extension.format-pug"
