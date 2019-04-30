@@ -3,7 +3,7 @@
     "displayName": "formatter-pug",
     "description": "",
     "version": "0.0.1",
-    "publisher": "jrieken",
+    "publisher": "alexbabichev",
     "engines": {
         "vscode": "^1.6.0"
     },
